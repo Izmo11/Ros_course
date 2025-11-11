@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(position_to_csv)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
@@ -7,9 +7,9 @@ project(position_to_csv)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  nav_msgs
-  rospy
+find_package(ament_cmake REQUIRED COMPONENTS
+  rclcpp
+  std_msgs
   sensor_msgs
 )
 
@@ -102,7 +102,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
+ament_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES position_to_csv
 #  CATKIN_DEPENDS nav_msgs rospy sensor_msgs
@@ -115,10 +115,7 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

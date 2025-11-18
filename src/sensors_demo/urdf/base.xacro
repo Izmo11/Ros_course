@@ -16,8 +16,8 @@
     <xacro:property name="range_max" value="5.0" />
     <!---->
     <xacro:include filename="$(find sensors_demo)/urdf/materials.xacro"/>
-    <!--<xacro:include filename="$(find sensors_demo)/urdf/sonar.gazebo" />-->
-    <xacro:include filename="$(find sensors_demo)/urdf/lidar.gazebo" />
+    <xacro:include filename="$(find sensors_demo)/urdf/sonar.gazebo" />
+    <!--<xacro:include filename="$(find sensors_demo)/urdf/lidar.gazebo" />-->
 
     <xacro:property name="lz" value="0.1" />
     <xacro:property name="lx" value="0.1" />
